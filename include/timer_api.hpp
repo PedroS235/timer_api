@@ -4,24 +4,24 @@
 #include <Arduino.h>
 
 /**
- * @class TIMER_API
+ * @class TimerAPI
  * @brief A simple timer class for measuring elapsed time intervals.
  *
- * The TIMER_API class allows you to create and manage timers to measure elapsed
+ * The TimerAPI class allows you to create and manage timers to measure elapsed
  * time intervals. It can be useful in various Arduino projects and other
  * embedded systems applications.
  */
-class TIMER_API {
+class TimerAPI {
 public:
   /**
-   * @brief Constructor for the TIMER_API class.
+   * @brief Constructor for the TimerAPI class.
    *
    * @param interval The time interval (in milliseconds) for the timer.
    * @param autoReset If true, the timer automatically resets after each
    * interval. If false, you need to manually reset the timer using the reset()
    * method.
    */
-  TIMER_API(unsigned long interval, bool start = true, bool autoReset = true);
+  TimerAPI(unsigned long interval, bool start = true, bool autoReset = true);
 
   /**
    * @brief Start the timer.

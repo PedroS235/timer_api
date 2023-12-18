@@ -1,7 +1,5 @@
 #include "timer_api.hpp"
 
-#include "Arduino.h"
-
 TimerAPI::TimerAPI(unsigned long interval, bool start, bool auto_reset)
     : interval_(interval), auto_reset_(auto_reset) {
   if (start) {
