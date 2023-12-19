@@ -12,7 +12,7 @@ lib_deps=
 ## Example (Blynk Program)
 ```cpp
 #include <Arduino.h>
-#include <timer_api.h>
+#include <timer_api.hpp>
 
 bool toggle_led = false;
 // interval, auto_start = true, auto_reset = true
@@ -24,8 +24,8 @@ void setup(void){
 
 void loop(void){
   if(timer.has_elapsed()){
-    toggle = !toggle;
-    digitalWrite(LED_BUILTIN, toggle);
+    toggle_led = !toggle_led;
+    digitalWrite(LED_BUILTIN, toggle_led);
   }
 }
 ```
@@ -33,7 +33,7 @@ void loop(void){
 ## Example (Blynk Once)
 ```cpp
 #include <Arduino.h>
-#include <timer_api.h>
+#include <timer_api.hpp>
 
 // interval, auto_start = true, auto_reset = true
 TimerAPI timer(3000, true, false); // setting the timer to trigger after 3 seconds, only once
@@ -44,7 +44,7 @@ void setup(void){
 
 void loop(void){
   if(timer.has_elapsed()){
-    digitalWrite(LED_BUILTIN, toggle);
+    digitalWrite(LED_BUILTIN, HIGH);
   }
 }
 ``` 
